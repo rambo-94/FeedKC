@@ -1,1 +1,39 @@
-<p>dashboard works!</p>
+<div style="width: 100%">
+  <h6 [style.display]="msg" style="float: left" >Max One donation can be requested</h6>
+
+  <div id="cart" style="float: right; position: relative;right:50px;top: 10px">
+    <mat-icon [matBadge]="itemToCart"   (click)="cartView()" style="align:left">shopping_cart</mat-icon>
+
+  </div>
+
+  <div class="row x " style="margin: 0px">
+    <div *ngFor="let donation of donationsArray">
+      <div class="col-md-4 col-sm-6" style="padding-bottom: 20px">
+        <div class="card xx">
+          <img src="{{donation.url}}" class="card-img-top" style="height: 100px;" alt="">
+          <div style="overflow: visible" class="card-body " style="height: 200px">
+            <h5 #zz style="padding: 0px" class="card-title">{{donation.DishName}}</h5>
+            <p #yy style="padding: 0px" class="card-text">{{donation.DOE}}</p>
+            <p #xx style="padding: 0px" class="card-text">{{donation.address}}</p>
+            <a class="btn btn-primary" style="margin-right: 10px" (click)="cart(xx.textContent,yy.textContent,zz.textContent)">Add to cart</a>
+            <a class="btn btn-danger" (click)="removeitem(xx.textContent,yy.textContent,zz.textContent)">Remove</a>
+
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div   id="overlay" [style.display]="overlay" >
+
+
+  <div class="main">
+
+  </div>
+</div>
+
+

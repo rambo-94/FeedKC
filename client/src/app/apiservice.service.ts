@@ -44,4 +44,10 @@ export class ApiserviceService {
       );
   }
 
+  getDonationDetails(): Observable<any>{
+    const url = `${apiUrl3}/` +"getDonateDetails";
+    return this.client.get(url).pipe(map(res=>{return res}),catchError(this.handleError));
+
+
+  }
 }
