@@ -14,6 +14,7 @@ import { RequestedItemComponent } from './requested-item/requested-item.componen
 import { RequestorComponent } from './requestor/requestor.component';
 import {MaterialModule} from "./material/material.module";
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
+import {RouterModule} from "@angular/router";
 
 @NgModule({
   declarations: [
