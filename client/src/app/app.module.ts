@@ -8,11 +8,12 @@ import { DonateComponent } from './donate/donate.component';
 import { DrviewComponent } from './drview/drview.component';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
-import { MaterialComponent } from './material/material.component';
 import { ProfileComponent } from './profile/profile.component';
 import { RegisterComponent } from './register/register.component';
 import { RequestedItemComponent } from './requested-item/requested-item.component';
 import { RequestorComponent } from './requestor/requestor.component';
+import {MaterialModule} from "./material/material.module";
+import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,6 @@ import { RequestorComponent } from './requestor/requestor.component';
     DrviewComponent,
     HomeComponent,
     LoginComponent,
-    MaterialComponent,
     ProfileComponent,
     RegisterComponent,
     RequestedItemComponent,
@@ -30,7 +30,9 @@ import { RequestorComponent } from './requestor/requestor.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    MaterialModule,
+    NoopAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
