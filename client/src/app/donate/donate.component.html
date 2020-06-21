@@ -1,1 +1,20 @@
-<p>donate works!</p>
+<div style="padding-left: 30px">
+  <form [formGroup]="details" (ngSubmit)="detailsSub(details.value)" >
+    <label>Dish Name</label><input type="text" style="display: block" placeholder="enter the item name" formControlName="dish"/>
+    <mat-form-field>
+      <input style="display: block" matInput [matDatepicker]="picker" formControlName="date" placeholder=" date of cooking">
+      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+    <label style="display: block">Donor Name</label><input type="text" style="display: block" placeholder="enter the point of contact" formControlName="contactName"/>
+    <label>Pick-up Address</label><input type="text" style="display: block"placeholder="enter the pick-up location" formControlName="location"/>
+    <label>Contact Number</label><input type="text" style="display: block" placeholder="enter the contact number" formControlName="contactNumber"/>
+    <button type="submit" >Submit</button>
+  </form>
+</div>
+<div>
+  <p [class.hide]='xxx' >Something went wrong !! please try submitting again</p>
+
+
+
+</div>

@@ -19,6 +19,8 @@ const apiUrl4 =  'http://localhost:3000/demog';
 
 
 export class ApiserviceService {
+  private donate ="saveDonateDetails";
+
   private handleError(error: HttpErrorResponse) {
     if (error.error instanceof ErrorEvent) {
       // A client-side or network error occurred. Handle it accordingly.
@@ -49,5 +51,16 @@ export class ApiserviceService {
     return this.client.get(url).pipe(map(res=>{return res}),catchError(this.handleError));
 
 
+  }
+
+
+  saveDonation(donateDetails: any) : Observable<any> {
+
+    const url = `${apiUrl3}/${(this.donate)}`;
+
+    return this.client.post(url, donateDetails,{ headers})
+      .pipe(map(res=>{return res}),
+        catchError(this.handleError)
+      );
   }
 }
