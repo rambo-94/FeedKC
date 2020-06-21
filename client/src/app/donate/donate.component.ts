@@ -20,7 +20,7 @@ export class DonateComponent implements OnInit {
     'location': ['', Validators.required],
     'contactNumber': ['', Validators.required]
   });
-  xxx = true;
+  hide = true;
 
   ngOnInit() {
   }
@@ -35,7 +35,7 @@ export class DonateComponent implements OnInit {
           if(data.msg == "Details saved Successfully") {
             this.router.navigate(['../'],{relativeTo:this.rou});
           }else{
-            this.xxx = false;
+            this.hide = false;
           }
         }
       )};

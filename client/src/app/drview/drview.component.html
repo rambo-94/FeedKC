@@ -1,1 +1,16 @@
-<p>drview works!</p>
+<div class="col-sm-2 sidenav side">
+  <h2 style="color: black">FeedKC</h2>
+  <ul class="pt-3">
+    <li [ngClass]="{'active': selectedItemId == 'dashboard'}" (click)="selectedItemId = 'dashboard'"><mat-icon>dashboard</mat-icon> <a
+      (click)="clicknav('dashboard')"><span class="subHeading">Dashboard</span></a></li>
+    <li [ngClass]="{'active': selectedItemId == 'Donate'}" (click)="selectedItemId = 'donate'"><mat-icon>card_giftcard</mat-icon><a
+      (click)=" clicknav('donate')"><span class="subHeading">Donate</span></a>
+    </li>
+    <li [ngClass]="{'active': selectedItemId == 'Profile'}" (click)="selectedItemId = 'profile'"><mat-icon>contacts</mat-icon><a
+      (click)=" clicknav('profile')"><span class="subHeading">Profile</span></a></li>
+    <li [ngClass]="{'active': selectedItemId == 'logout'}">
+      <a  (click)="logout()"><mat-icon>subdirectory_arrow_left</mat-icon><span class="subHeading">Logout</span></a></li>
+
+  </ul>
+
+</div>
