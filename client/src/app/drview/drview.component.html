@@ -1,3 +1,6 @@
+<div class="row" style="margin: 0px ;width:100%">
+
+
 <div class="col-sm-2 sidenav side">
   <h2 style="color: black">FeedKC</h2>
   <ul class="pt-3">
@@ -12,5 +15,12 @@
       <a  (click)="logout()"><mat-icon>subdirectory_arrow_left</mat-icon><span class="subHeading">Logout</span></a></li>
 
   </ul>
+
+</div>
+
+  <div class="col-sm-10" style="margin: 0px;padding: 0px">
+
+    <router-outlet></router-outlet>
+  </div>
 
 </div>
