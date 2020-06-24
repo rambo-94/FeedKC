@@ -1,1 +1,23 @@
-<p>profile works!</p>
+<div style="padding-left: 30px">
+  <form [formGroup]="saveForm" (ngSubmit)="onSave(saveForm.value)">
+    <label>name</label><input type="text" style=" display: block" formControlName="username"
+                              placeholder="Change your username"/>
+    <label>email</label><input type="text" formControlName="email" style=" display: block"
+                               placeholder="change your email"/>
+    <label>address</label><input type="text" formControlName="address" style=" display: block"
+                                 placeholder="change your address"/>
+    <button type="submit" style=" display: block">save</button>
+
+  </form>
+</div>
+
+<p style="font-size: medium;color: black;padding-left: 30px">{{savingMsg}}</p>
+<div style="padding-left: 30px">
+  <button (click)="display = false">Change password</button>
+  <div [class.hide]="display">
+    <input type="password" [(ngModel)]="chpassword" style="display: inline" placeholder="Confirm your password"/>
+    <button type="submit" (click)="passwordCh()">Change</button>
+    <h6 [style.display]="passMsg">Password changed successfully</h6>
+    <h6 [style.display]="passMsg1">Please Try again</h6>
+  </div>
+</div>
