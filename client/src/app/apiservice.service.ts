@@ -63,4 +63,24 @@ export class ApiserviceService {
         catchError(this.handleError)
       );
   }
+
+  getDemographics(username: String): Observable<any> {
+    const url = `${apiUrl4}/${(username)}`;
+
+    return this.client.get(url, {headers})
+      .pipe(map(res=>{return res}),
+        catchError(this.handleError)
+      );
+  }
+
+
+  changePassword(newCred: any): Observable<any> {
+
+    const url = `${apiUrl4}/` +"updatePass";
+    return this.client.post(url, newCred,{ headers})
+      .pipe(map(res=>{return res}),
+        catchError(this.handleError)
+      );
+
+  }
 }
