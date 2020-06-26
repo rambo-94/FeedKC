@@ -1,1 +1,12 @@
-<p>register works!</p>
+<div >
+  <form [formGroup]="registerForm" (ngSubmit)="onSubmit(registerForm.value)" >
+    <label>name</label><input type="text" style=" display: block" formControlName="username" placeholder="Create your username"/>
+    <label>email</label><input type="text" formControlName="email" style=" display: block" placeholder="Enter your email"/>
+    <label>password</label><input type="text" formControlName="password" style=" display: block" placeholder="Enter your password"/>
+    <label>Confirm password</label><input type="text" formControlName="cpassword" style=" display: block" placeholder="Confirm your password"/>
+    <label>address</label><input type="text" formControlName="address"  style=" display: block" placeholder="Enter your address"/>
+    <input type="checkbox"  formControlName="donor"/><label >Donor </label>
+    <input type="checkbox" formControlName="requestor"/><label >Requestor </label>
+    <button type="submit" style=" display: block">submit</button>
+  </form>
+</div>
