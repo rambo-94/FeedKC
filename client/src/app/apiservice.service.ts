@@ -83,4 +83,15 @@ export class ApiserviceService {
       );
 
   }
+
+  updatedDemog(donateDetails: any) : Observable<any> {
+
+    const url = `${apiUrl4}/` +"updateDemog";
+
+    return this.client.post(url, donateDetails,{ headers})
+      .pipe(map(res=>{return res}),
+        catchError(this.handleError)
+      );
+  }
+
 }
