@@ -15,7 +15,7 @@ import { RequestorComponent } from './requestor/requestor.component';
 import {MaterialModule} from "./material/material.module";
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import {RouterModule} from "@angular/router";
-import {FormsModule} from "@angular/forms";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -35,7 +35,8 @@ import {FormsModule} from "@angular/forms";
     AppRoutingModule,
     MaterialModule,
     NoopAnimationsModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -94,4 +94,8 @@ export class ApiserviceService {
       );
   }
 
+
+  saveRegDetails(data): Observable<any> {
+    return this.client.post(apiUrl2, data,{ headers});
+  }
 }
